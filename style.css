@@ -6,7 +6,7 @@ body {
     
     text-align: center;
     text-decoration: none;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
     padding: 30px;
     
 }
@@ -33,11 +33,23 @@ h1{
 h2{
     color: #C7B299;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
 }
 p{
     color: white;
     text-align: center;
     margin: auto;
     padding-bottom: 50px;
+}
+li{
+    text-align: center;
+    color: #C7B299;
+    list-style-type: none;
+}
+hr{
+    border: 0px;
+    height: 1px;
+    width: 10%;
+    background-color: darkgrey;
+    margin-bottom: 50px;
 }
