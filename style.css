@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+     
+}
+.navigation{
+    
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 300px;
+    padding: 30px;
+    
+}
+.navigation a{
+    color: white;
+    padding: 5px 16px;
+
+    /* removes any decorations set by default */
+    text-decoration: none;
+}
+.navigation a:hover {
+    color: #C7B299;
+    text-decoration: underline;
+    
+}
+.navigation a.active{
+    color: #C7B299;
+}
+h1{
+    color: #C7B299;
+    text-align: center;
+    margin-top: 30px;
+}
+h2{
+    color: #C7B299;
+    text-align: center;
+    padding: 30px;
+}
+p{
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+}
