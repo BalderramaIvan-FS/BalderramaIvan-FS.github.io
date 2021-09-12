@@ -13,7 +13,6 @@ body {
 .navigation a{
     color: white;
     padding: 5px 16px;
-
     /* removes any decorations set by default */
     text-decoration: none;
 }
@@ -38,7 +37,6 @@ h2{
 p{
     color: white;
     text-align: center;
-    margin: auto;
     padding-bottom: 50px;
 }
 li{
@@ -52,4 +50,8 @@ hr{
     width: 10%;
     background-color: darkgrey;
     margin-bottom: 50px;
+}
+h3{
+    padding-left: 100px;
+    color: #C7B299;
 }
