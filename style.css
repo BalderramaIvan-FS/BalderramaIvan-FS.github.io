@@ -33,6 +33,7 @@ h2{
     color: #C7B299;
     text-align: center;
     padding: 20px;
+    top: 100px;
 }
 p{
     color: white;
@@ -54,4 +55,17 @@ hr{
 h3{
     padding-left: 100px;
     color: #C7B299;
+}
+
+.favoriteServices{
+    text-align: center;
+}
+.whatWeDo, .barberTools, .eyebrow {
+    position: relative; 
+    display:inline-block;
+    padding: 0 50px;
+    
+    
+}
+.whoWeAre{
 }
