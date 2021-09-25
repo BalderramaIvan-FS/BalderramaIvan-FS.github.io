@@ -9,33 +9,66 @@ for(let i = 0; i < apptTimes.length; i++)
     stringAppt += "(" + (i+1) + "). " + apptTimes[i] + " \n\n "
 }
 
-//Prompt the user to select a time
-
 let timeHours = document.getElementById('hours');
 timeHours.innerText = stringAppt;
 
+
+var nameLabel = document.getElementById('nameLabel');
+var numberLabel = document.getElementById('numberLabel');
+var serviceLabel = document.getElementById('serviceLabel');
+
+
 var submitButton = document.getElementById('apptButton').onclick = appointmentForm;
 
+
+//Function for when user types in information
 function appointmentForm(){
+    stringAppt = "";
+    //Assign variable to users input
     let userName = document.getElementById('nameInput').value;
-    let numberInput = document.getElementById('number').value;
+    var numberInput = document.getElementById('number').value;
     let service = document.getElementById('serviceInput').value;
 
-    apptTimes.splice(Number(numberInput -1), 1);
+    //check if user input values in the form.
+    validation(userName, numberInput, serviceInput);
 
     
+    if(numberInput != 0)
+    {
+        //remove appointment time depending on users index selection
+        apptTimes.splice(Number(numberInput -1), 1);
+    }
+    
 
-
-    document.getElementById("nameResult").innerHTML += userName;
-    document.getElementById("appointmentTime").innerHTML += apptTimes[Number(numberInput -1)];
-    document.getElementById("serviceType").innerHTML += service;
+    for(let j = 0; j < apptTimes.length; j++)
+{
+    stringAppt += "(" + (j+1) + "). " + apptTimes[j] + " \n\n "
+}
+//Displays an updated list of appointment times.
+    timeHours.innerText = stringAppt;
+    //Displays the users chosen items.
+    document.getElementById("nameResult").innerHTML = 'Name: ' + userName;
+    document.getElementById("appointmentTime").innerHTML = 'Time: ' + apptTimes[Number(numberInput -1)];
+    document.getElementById("serviceType").innerHTML = 'Service: ' + service;
 
 }
 
-
-    for(let j = 0; j < apptTimes.length; j++)
+//validates if the fields are empty then it will pop an alert.
+function validation(nameInput, numberInput, serviceInput)
+{
+    if(nameInput ==='' )
     {
-        timeHours.innerText += apptTimes[j]+"\n";
-    };
+        alert('Please put a first and last name.')
+    }
+    else if(numberInput === '')
+    {
+        alert('Please select a number from the list in the appointment times available.')
+    }
+    else if(serviceInput ==='')
+    {
+        alert('Please type the type of service you are requesting.')
+    }
+}
+    
 
 

@@ -83,10 +83,11 @@
         <h2>Appointment Form</h2>
         <p> Please fill out the form and select an appointment from the right. Only use numbers such as '1, 2, 3, ect...'
         </p>
+        
             <table>
                 <tr>
                     <td right><label id="nameLabel">Name:</label></td>
-                    <td left><input type="text" id="nameInput"></input></td>
+                    <td left><input placeholder="First and Last Name" type="text" id="nameInput"></input></td>
                 </tr>
                 <tr>
                     <td><label id=numberLabel>Appointment Number:</label></td>
@@ -94,13 +95,14 @@
                 </tr>
                 <tr>
                     <td><label id=serviceLabel>Service Type:</label></td>
-                    <td><input type="text" id="serviceInput"></td>
+                    <td><input placeholder="(Haircut, shave, thread, ect...)" type="text" id="serviceInput"></td>
                 </tr>
             </table>
     
-            <button id="apptButton">Submit</button>
+            <button id="apptButton" >Submit</button>
+        
             <div>
-                <h5>Appointment Selected:</h5>
+                <h4>Appointment Selected:</h4>
                 <p id="nameResult">Name: </p>
                 <p id="appointmentTime">Time: </p>
                 <p id="serviceType">Service: </p>
