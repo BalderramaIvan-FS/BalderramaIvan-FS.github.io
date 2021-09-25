@@ -35,11 +35,7 @@ h2{
     padding: 20px;
     top: 100px;
 }
-p{
-    color: white;
-    text-align: center;
-    padding-bottom: 50px;
-}
+
 li{
     text-align: center;
     color: #C7B299;
@@ -64,8 +60,50 @@ h3{
     position: relative; 
     display:inline-block;
     padding: 0 50px;
-    
-    
 }
-.whoWeAre{
+.appointments{
+    text-align:center;
+}
+#timeTable{
+    border: 1px solid #C7B299;
+}
+th{
+    color: #C7B299;
+    text-align: center;
+}
+td{
+    color: white;
+    text-align: left;
+    padding: 10px 20px;
+}
+p{
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+}
+#hoursContainer{
+    border: 2px white solid;
+    width: 49%;
+    float: right;
+}
+#formContainer{
+    border: 2px white solid;
+    width: 49%;
+    float: left;
+}
+
+#hours{
+    color:white;
+}
+label{
+    color: white;
+}
+input{
+    float: right;
+}
+form{
+    text-align:center;
+}
+h5{
+    color: #C7B299;
 }

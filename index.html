@@ -7,65 +7,66 @@
     <title> OTT </title>
 
     <!-- rel will be type of file that it's linking to.-->
-    <link rel="stylesheet" href="style.css"/>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    
 </head>
 
 <body>
-    <h1><img src="images/Off The Top - Logo.png" alt="Off The Top Barbershop Logo" style="height: 150px; width: 100x"></h1>
+    
+    <h1><img src="images/Off The Top - Logo.png" alt="Off The Top Barbershop Logo" style="height: 150px; width: 100x">
+    </h1>
 
     <nav class="navigation">
         <a class="active" href="#home">Home</a>
         <!-- Contact added just for learning purposes when mouse hovers.-->
         <a href="#appointments">Appointments</a>
     </nav>
-<main>
-    <p><img src="images/What We do.jpg" alt="hair cut photo"></p>
-</main>
+    <main>
+        <p><img src="images/What We do.jpg" alt="hair cut photo"></p>
+    </main>
     
+<h3>Favorited Services</h3>
+<div class="favoriteServices">
+    <div class="whatWeDo">
+        <img src="images/What We do1.jpg" alt="hair cut quick" style="border-radius: 60px 0;" />
 
-    <h3>Favorited Services</h3>
-    <div class="favoriteServices">
-        <div class="whatWeDo">
-            <img src="images/What We do1.jpg" alt="hair cut quick" style="border-radius: 60px 0;"/>
-            
-        </div>
-        <div class="barberTools">
-            <img src="images/Barber-Tools.jpg" alt="barber tools photo" style="border-radius: 60px 0;"/>
-        </div>
-        <div class="eyebrow">
-            <img src="images/zulmaury-saavedra-R5v6nFL0Csc-unsplash.jpg" alt="eyebrow photo" style="border-radius: 60px 0;"/>
-        </div>
     </div>
-    
+    <div class="barberTools">
+        <img src="images/Barber-Tools.jpg" alt="barber tools photo" style="border-radius: 60px 0;" />
+    </div>
+    <div class="eyebrow">
+        <img src="images/zulmaury-saavedra-R5v6nFL0Csc-unsplash.jpg" alt="eyebrow photo"
+            style="border-radius: 60px 0;" />
+    </div>
+</div>
 <section class="whoWeAre">
     <div>
-    <h2> Who We Are</h2>
+        <h2> Who We Are</h2>
 
-    <p>We are a barber shop that was established recently in 2021 in Rogers, AR.
-        Our barbers have been carefully chosen to meet or exceed customers expectations and provide customers a soothing
-        experience.
-        We always try to apply the best techniques and attend competitions.
-        So don’t be afraid to stop on by and check out the newest shop!
+        <p>We are a barber shop that was established recently in 2021 in Rogers, AR.
+            Our barbers have been carefully chosen to meet or exceed customers expectations and provide customers a
+            soothing
+            experience.
+            We always try to apply the best techniques and attend competitions.
+            So don’t be afraid to stop on by and check out the newest shop!
 
-    </p>
-</div>
+        </p>
+    </div>
 </section>
-
-    <p><img src="images/Whiskey.jpg"> </p>
-
-<section>
-    <h2>Relax</h2>
-    <p>We like to get to know our customers, so come by and take a drink at our bar and relax!
-        We understand sometimes we need to release some stress, so what better way than to drink responsibly and
-        socialize.
-        Who knows you may make a friend that specializes in something you acquire whether its professionally or
-        personal!
-    </p>
-</section>
+    <section>
+        <p><img src="images/Whiskey.jpg"> </p>
+    
+        <h2>Relax</h2>
+        <p>We like to get to know our customers, so come by and take a drink at our bar and relax!
+            We understand sometimes we need to release some stress, so what better way than to drink responsibly and
+            socialize.
+            Who knows you may make a friend that specializes in something you acquire whether its professionally or
+            personal!
+        </p>
+    </section>
 
     <section>
-        <h2>Services</h2>
+        <h2 id="services">Services</h2>
     <hr>
     <ul>
         <li>Haircut</li>
@@ -78,8 +79,41 @@
         <p>Eyebrow threading not only keeps your eyebrows looking nice but it also last longer, less painful than waxing or plucking, and more precise.</p>
     </ul>
     </section>
+    <section id="formContainer">
+        <h2>Appointment Form</h2>
+        <p> Please fill out the form and select an appointment from the right. Only use numbers such as '1, 2, 3, ect...'
+        </p>
+            <table>
+                <tr>
+                    <td right><label id="nameLabel">Name:</label></td>
+                    <td left><input type="text" id="nameInput"></input></td>
+                </tr>
+                <tr>
+                    <td><label id=numberLabel>Appointment Number:</label></td>
+                    <td><input type="text" id="number"></input></td>
+                </tr>
+                <tr>
+                    <td><label id=serviceLabel>Service Type:</label></td>
+                    <td><input type="text" id="serviceInput"></td>
+                </tr>
+            </table>
     
-    <h2 id="appointments">Appointments</h2>
-</body>
-
-</html>
+            <button id="apptButton">Submit</button>
+            <div>
+                <h5>Appointment Selected:</h5>
+                <p id="nameResult">Name: </p>
+                <p id="appointmentTime">Time: </p>
+                <p id="serviceType">Service: </p>
+            </div>
+        
+    </section>
+    <section id="hoursContainer">
+        <div>
+            <h2 id="appointments">Appointments</h2>
+            <p id="hours"></p>
+        </div>
+    </section>
+    <script src="main.js"></script>
+    </body>
+    
+    </html>
