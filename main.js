@@ -23,7 +23,7 @@ var submitButton = document.getElementById('apptButton').onclick = appointmentFo
 
 //Function for when user types in information
 function appointmentForm(){
-    stringAppt = "";
+    stringAppt = "Time Availability: \n\n"
     //Assign variable to users input
     let userName = document.getElementById('nameInput').value;
     var numberInput = document.getElementById('number').value;
@@ -32,11 +32,14 @@ function appointmentForm(){
     //check if user input values in the form.
     validation(userName, numberInput, serviceInput);
 
-    
-    if(numberInput != 0)
+    var timeSelected = apptTimes[numberInput -1];
+    if(numberInput != 0 || numberInput <= apptTimes.length)
     {
         //remove appointment time depending on users index selection
         apptTimes.splice(Number(numberInput -1), 1);
+    }
+    else{
+        alert("Invalid Input.");
     }
     
 
@@ -48,7 +51,7 @@ function appointmentForm(){
     timeHours.innerText = stringAppt;
     //Displays the users chosen items.
     document.getElementById("nameResult").innerHTML = 'Name: ' + userName;
-    document.getElementById("appointmentTime").innerHTML = 'Time: ' + apptTimes[Number(numberInput -1)];
+    document.getElementById("appointmentTime").innerHTML = 'Time: ' + timeSelected;
     document.getElementById("serviceType").innerHTML = 'Service: ' + service;
 
 }
